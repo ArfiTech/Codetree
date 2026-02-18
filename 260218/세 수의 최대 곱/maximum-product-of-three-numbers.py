@@ -22,7 +22,7 @@ else:
 # case 2) all neg
 if len(neg) > 2:
     case2_list = neg[-3:]
-    case2 = case1_list[0] * case1_list[1] * case1_list[2]
+    case2 = case2_list[0] * case2_list[1] * case2_list[2]
 else:
     case2 = -INT_MAX
 
