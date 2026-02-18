@@ -17,12 +17,12 @@ for i, line in enumerate(board):
 if abs(b_pos[0] - l_pos[0]) - 1 >= 0 and abs(b_pos[1] - l_pos[1]) - 1 >= 0:
     print(abs(b_pos[0] - l_pos[0]) - 1 + abs(b_pos[1] - l_pos[1]) - 1 + 1)
 elif abs(b_pos[0] - l_pos[0]) - 1 < 0:
-    if l_pos[0] == r_pos[0]:
+    if l_pos[0] == r_pos[0] and ((l_pos[1] > r_pos[1] and b_pos[1] < r_pos[1]) or (l_pos[1] < r_pos[1] and b_pos[1] > r_pos[1])):
         print(abs(b_pos[1] - l_pos[1]) - 1 + 2)
     else:
         print(abs(b_pos[1] - l_pos[1]) - 1)
 elif abs(b_pos[1] - l_pos[1]) - 1 < 0:
-    if l_pos[1] == r_pos[1]:
+    if l_pos[1] == r_pos[1] and ((l_pos[0] > r_pos[0] and b_pos[0] < r_pos[0]) or (l_pos[0] < r_pos[0] and b_pos[0] > r_pos[0])):
         print(abs(b_pos[0] - l_pos[0]) - 1 + 2)
     else:
         print(abs(b_pos[0] - l_pos[0]) - 1)
