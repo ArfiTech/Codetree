@@ -11,8 +11,15 @@ evens = [x for x in numbers if x % 2 == 0]
 # print(evens)
 tot_pack = 0
 
-if (len(evens) - len(odds) > 2) or (len(evens) == 0 and len(odds) < 2):
+if len(evens) == 0 and len(odds) < 2:
     print(0)
+    sys.exit(0)
+
+if len(evens) - len(odds) > 2:
+    if len(odds) == 0:
+        print(1)
+    else:
+        print(len(odds)*2 + 1)
     sys.exit(0)
 
 if len(evens) > 0:
