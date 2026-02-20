@@ -15,7 +15,7 @@ if len(evens) == 0 and len(odds) < 2:
     print(0)
     sys.exit(0)
 
-if len(evens) - len(odds) > 2:
+if len(evens) - len(odds) > 1:
     if len(odds) == 0:
         print(1)
     else:
@@ -46,12 +46,3 @@ if use_odds > 0:
 
 
 print(tot_pack) 
-
-
-# i = 0
-# while len(odds) > 0 and len(evens) > 0:
-#     i += 1
-#     if i % 2 == 1:  # 짝수 나올 차례
-
-#     else:  # 홀수 나올 차례
-#         pass
