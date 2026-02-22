@@ -6,6 +6,7 @@ t = 0
 for i in range(n-1, 0, -1):
     if sequence[i] < sequence[i-1]:
         t = i
+        break
 print(t)
 # import sys
 # INT_MAX = sys.maxsize
