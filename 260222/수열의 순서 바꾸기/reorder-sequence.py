@@ -2,38 +2,43 @@ n = int(input())
 sequence = list(map(int, input().split()))
 
 # Please write your code here.
-import sys
-INT_MAX = sys.maxsize
-cnt = 0
-sorted_seq = sorted(sequence)
-fdsa = 0
-while True:
-    if sequence == sorted_seq:
-        print(cnt)
-        break
-    # is_sorted = True
-    if sequence[0] > sequence[-1]:
-        t = sequence.pop(0)
-        sequence.append(t)
-        cnt += 1
-        # is_sorted = False
-    else:
-        insert_idx = -1
-        _min = INT_MAX
-        for i in range(n-1, 1, -1):
-            # print(i)
-            if sequence[i] > sequence[0] and sequence[i] - sequence[i-1] != 1:
-                # print("i", i)
-                if _min > sequence[i]:
-                    insert_idx = i-1
-                    _min = sequence[i]
-                # is_sorted = False
-                # break
-        # print(insert_idx)
-        if insert_idx > -1:
-            t = sequence.pop(0)
-            sequence.insert(insert_idx, t)
-            cnt += 1
+t = 0
+for i in range(n-1, 1, -1):
+    if sequence[i] < sequence[i-1]:
+        t = i
+print(t)
+# import sys
+# INT_MAX = sys.maxsize
+# cnt = 0
+# sorted_seq = sorted(sequence)
+# fdsa = 0
+# while True:
+#     if sequence == sorted_seq:
+#         print(cnt)
+#         break
+#     # is_sorted = True
+#     if sequence[0] > sequence[-1]:
+#         t = sequence.pop(0)
+#         sequence.append(t)
+#         cnt += 1
+#         # is_sorted = False
+#     else:
+#         insert_idx = -1
+#         _min = INT_MAX
+#         for i in range(n-1, 1, -1):
+#             # print(i)
+#             if sequence[i] > sequence[0] and sequence[i] - sequence[i-1] != 1:
+#                 # print("i", i)
+#                 if _min > sequence[i]:
+#                     insert_idx = i-1
+#                     _min = sequence[i]
+#                 # is_sorted = False
+#                 # break
+#         # print(insert_idx)
+#         if insert_idx > -1:
+#             t = sequence.pop(0)
+#             sequence.insert(insert_idx, t)
+#             cnt += 1
     # print(sequence)
 # print(0)
 # while True:
