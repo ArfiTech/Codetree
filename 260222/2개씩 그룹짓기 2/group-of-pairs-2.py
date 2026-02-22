@@ -2,8 +2,12 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 # Please write your code here.
-arr.sort()
-idx_1 = (n-1)//2
-idx_2 = ((2*n-1)+n)//2
+import sys
+INT_MAX = sys.maxsize
 
-print(arr[idx_2] - arr[idx_1])
+arr.sort()
+min_max = INT_MAX
+for i in range(n):
+    min_max = min(min_max, arr[i+n] - arr[i])
+
+print(min_max)
