@@ -3,7 +3,7 @@ sequence = list(map(int, input().split()))
 
 # Please write your code here.
 t = 0
-for i in range(n-1, 1, -1):
+for i in range(n-1, 0, -1):
     if sequence[i] < sequence[i-1]:
         t = i
 print(t)
