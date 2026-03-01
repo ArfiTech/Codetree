@@ -10,7 +10,7 @@ for i, s in enumerate(str):
             if arr[-1] == '(':
                 arr.pop()
         else:
-            arr.appent(s)
+            arr.append(s)
             break
     
 if len(arr) <= 0:
