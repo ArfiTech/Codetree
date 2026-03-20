@@ -27,6 +27,7 @@ def dfs(x, y):
             res = 1
         if can_go(new_x, new_y):
             # print(new_x, new_y)
+            visited[new_x][new_y] = True
             dfs(new_x, new_y)
 
 dfs(0, 0)
