@@ -1,5 +1,6 @@
 n, m = map(int, input().split())
-edges = [tuple(map(int, input().split())) for _ in range(m)]
+# edges = [tuple(map(int, input().split())) for _ in range(m)]
+edges = [list(map(int, input().split())) for _ in range(m)]
 
 # Please write your code here.
 visited = [[False for _ in range(m)] for _ in range(n)]
