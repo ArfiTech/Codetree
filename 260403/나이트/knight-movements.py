@@ -6,7 +6,7 @@ from collections import deque
 
 q = deque()
 visited = [[False for _ in range(n)] for _ in range(n)]
-step = [[0 for _ in range(n)] for _ in range(n)]
+step = [[-1 for _ in range(n)] for _ in range(n)]
 
 def in_range(x, y):
     return x >= 0 and x < n and y >= 0 and y < n
@@ -38,7 +38,8 @@ def bfs():
 push(r1-1, c1-1, 0)
 bfs()
 # print(step)
-if step[r2-1][c2-1] == 0:
-    print(-1)
-else:
-    print(step[r2-1][c2-1])
+# if step[r2-1][c2-1] == 0:
+#     print(-1)
+# else:
+#     print(step[r2-1][c2-1])
+print(step[r2-1][c2-1])
